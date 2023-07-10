@@ -1,1 +1,19 @@
-<h1>Welcome to info!</h1>
+<div id="title">
+  <h1>Welcome to Football Scanning Drills!</h1>
+</div>
+
+<script>
+  const colors = ["red", "blue", "yellow", "white", "black", "green"];
+  const min = Math.ceil(0);
+  const max = Math.floor(colors.length);
+
+  const title = document.getElementById("title");
+  const getRandomNumber = () => {
+   return Math.floor(Math.random() * (max - min) + min);
+  };
+  const changeBackgroundColor = () => {
+    title.style.backgroundColor = colors[getRandomNumber()];
+  };
+
+  setInterval(changeBackgroundColor, 1000);
+</script>
