@@ -2,12 +2,15 @@
   <h1>Welcome to Football Scanning Drills!</h1>
 </div>
 
+<div id="body" style="height: 100%;">
+</div>
+
 <script>
-  const colors = ["red", "blue", "yellow", "white", "black", "green"];
+  const colors = ["red", "blue", "yellow", "white", "black", "green", "teal", "indigo"];
   const min = Math.ceil(0);
   const max = Math.floor(colors.length);
 
-  const title = document.getElementById("title");
+  const title = document.getElementById("body");
   const getRandomNumber = () => {
    return Math.floor(Math.random() * (max - min) + min);
   };
