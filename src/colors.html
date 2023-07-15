@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <title>Color Changer</title>
+  <header>
+    <h1>Color Changer</h1>
+    <h2>Improve your scanning by saying the name of the color when receiving the ball in-between touches.</h2>
+  </header>
+  
+  <div id="background" style="height: 100vh"></div>
+  
+  <script async>
+    const colors = ["red", "blue", "yellow", "white", "black", "green", "teal", "indigo"];
+    const min = Math.ceil(0);
+    const max = Math.floor(colors.length);
+  
+    const background = document.getElementById("background");
+
+    const getRandomNumber = () => {
+     return Math.floor(Math.random() * (max - min) + min);
+    };
+
+    const changeBackgroundColor = () => {
+      background.style.backgroundColor = colors[getRandomNumber()];
+    };
+  
+    setInterval(changeBackgroundColor, 1000);
+  </script>
+</html>
