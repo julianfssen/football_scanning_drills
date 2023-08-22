@@ -3,13 +3,21 @@
   <title>Color Changer</title>
   <header>
     <h1>Color Changer</h1>
-    <h2>Improve your scanning by saying the name of the color when receiving the ball in-between touches.</h2>
+    <h2>Improve your scanning by reacting to the color when receiving the ball in-between touches.</h2>
   </header>
-  
-  <div id="background" style="height: 100vh"></div>
-  
+
+  <main>
+    <ul>
+      <li><span style="color: red;"><b>Red</b></span>: An opposition player is close behind and you should pass the ball back.</li>
+      <li><span style="color: green;"><b>Green</b></span>: There's open space behind and you can turn and linger a couple of seconds the ball.</li>
+      <li><span style="color: orange;"><b>Yellow</b></span>: An opposition player approaching and you can either pass back or perform a feint to evade the player.</li>
+      <li><span style="color: blue;"><b>Blue</b></span>: A teammate is asking for the ball from the sides.</li>
+    </ul>
+    <div id="background" style="height: 100vh"></div>
+  </main>
+
   <script async>
-    const colors = ["red", "blue", "yellow", "white", "black", "green", "teal", "indigo"];
+    const colors = ["red", "blue", "orange", "green"];
     const min = Math.ceil(0);
     const max = Math.floor(colors.length);
   
@@ -23,6 +31,6 @@
       background.style.backgroundColor = colors[getRandomNumber()];
     };
   
-    setInterval(changeBackgroundColor, 1000);
+    setInterval(changeBackgroundColor, 1500);
   </script>
 </html>
